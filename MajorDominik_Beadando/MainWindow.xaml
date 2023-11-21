@@ -1,0 +1,18 @@
+﻿<Window x:Class="MajorDominik_Beadando.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MajorDominik_Beadando"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+			<Button  Content="Hozzáad" Width="100" HorizontalAlignment="Left" Click="Add_Click"/>
+			<Button DockPanel.Dock="Top" Content="Töröl" Width="100" HorizontalAlignment="Left" Click="Delete_Click"/>
+			<Button DockPanel.Dock="Top" Content="Frissítés" Width="100" HorizontalAlignment="Left" Click="Update_Click"/>
+		</StackPanel>
+
+		<ListBox x:Name="peopleList" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+	</DockPanel>
+</Window>
