@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -43,7 +44,7 @@ namespace MajorDominik_Beadando
 			textBoxTelefonszam.Text = this.person.Phone.ToString();
 		}
 
-		private void Add_Click(object sender, RoutedEventArgs e)
+		private void buttonAdd_Click(object sender, RoutedEventArgs e)
 		{
 			try
 			{
@@ -68,16 +69,16 @@ namespace MajorDominik_Beadando
 
 		}
 
-		private void Update_Click(object sender, RoutedEventArgs e)
+		private void buttonUpdate_Click(object sender, RoutedEventArgs e)
 		{
 			try
 			{
 				Person person = CreatePersonFromInputFields();
-				Person updated = service.Update(person);
+				Person updated = service.Update(this.person.Id, person);
 				if (updated.Id != 0)
 				{
 					MessageBox.Show("Sikeres módosítás");
-
+					this.Close();
 				}
 				else
 				{
@@ -86,7 +87,6 @@ namespace MajorDominik_Beadando
 			}
 			catch (Exception)
 			{
-
 				throw;
 			}
 
@@ -112,6 +112,10 @@ namespace MajorDominik_Beadando
 			{
 				throw new Exception("Telefonszám kitöltése kötelező!");
 			}
+			Person person = new Person();
+			person.Name = name;
+			person.Email = email;
+			person.Phone = phone;
 			return person;
 		}
 	}

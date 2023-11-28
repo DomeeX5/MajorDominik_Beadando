@@ -69,7 +69,7 @@ namespace MajorDominik_Beadando
 				MessageBox.Show("A módosításhoz jelölj ki egy elemet!", "Hiba", MessageBoxButton.OK);
 				return;
 			}
-			PersonForm personForm = new PersonForm();
+			PersonForm personForm = new PersonForm(selected);
 			personForm.Closed += (_, _) =>
 			{
 				peopleList.ItemsSource = service.GetAll();

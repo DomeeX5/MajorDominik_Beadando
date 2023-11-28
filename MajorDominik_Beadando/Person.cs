@@ -19,11 +19,6 @@ namespace MajorDominik_Beadando
 		public string Name { get; set; }
 		[JsonProperty("Phone Number")]
 		public string Phone { get; set; }
-
-		public override string ToString()
-		{
-			return $"Azonosító: {this.Id}\nNév: {this.Name}\nEmail: {this.Email}\nTelefonszám: {this.Phone}";
-		}
 	}
 
 }

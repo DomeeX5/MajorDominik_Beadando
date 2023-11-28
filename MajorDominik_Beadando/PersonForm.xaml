@@ -28,6 +28,6 @@
 		<TextBox x:Name="textBoxTelefonszam" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30" FontSize="20"/>
 
 		<Button x:Name="buttonAdd" Content="Hozzáad" FontSize="20" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Height="30" Click="buttonAdd_Click"/>
-		<Button x:Name="buttonUpdate" Content="Módosítás" FontSize="20" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Height="30" Click="buttonAdd_Click"/>
+		<Button x:Name="buttonUpdate" Visibility="Collapsed" Content="Módosítás" FontSize="20" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Height="30" Click="buttonUpdate_Click"/>
 	</Grid>
 </Window>

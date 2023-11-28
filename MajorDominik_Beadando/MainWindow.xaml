@@ -13,6 +13,6 @@
 			<Button DockPanel.Dock="Top" Content="Frissítés" Width="100" HorizontalAlignment="Left" Click="Update_Click"/>
 		</StackPanel>
 
-		<ListBox x:Name="peopleList" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+		<DataGrid x:Name="peopleList" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 	</DockPanel>
 </Window>
